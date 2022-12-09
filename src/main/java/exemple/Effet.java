@@ -1,7 +1,7 @@
 package exemple;
 
 import bandeau.Bandeau;
-import javafx.scene.paint.Color;
+import java.awt.Color;
 
 public abstract class Effet {
 
@@ -18,7 +18,7 @@ public abstract class Effet {
 	        this.texte = texte;
 	    }
 	    
-	    public Effet( Bandeau bandeau, String texte, Color couleur) {
+	    public Effet(Bandeau bandeau, String texte, Color couleur) {
 	        this.bandeau = bandeau;
 	        this.texte = texte;
 	        this.couleur = couleur;

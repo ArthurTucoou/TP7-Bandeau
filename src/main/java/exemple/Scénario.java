@@ -7,19 +7,18 @@ public class Scénario {
 	
 	  public Bandeau bandeau;
 
-	    ArrayList<Effet> mesEffets = new ArrayList<Effet>();
+	    ArrayList<Effet> listeEffets = new ArrayList<Effet>();
 	    
 	    public Scénario(Bandeau bandeau) {
 	        this.bandeau = bandeau;
 	    }
 
-	    public void addEffet(Effet mesEffets) {
-	        this.mesEffets.add(mesEffets);
-
+	    public void ajoutEffet(Effet listeEffets) {
+	        this.listeEffets.add(listeEffets);
 	    }
 
 	    public void afficherScénario() {
-	        for (Effet e : mesEffets) {
+	        for (Effet e : listeEffets) {
 	            e.afficher();
 	            bandeau.sleep(1000);
 	        }

@@ -1,7 +1,6 @@
 package exemple;
 
 import java.awt.Color;
-import java.awt.Font;
 
 import bandeau.Bandeau;
 
@@ -10,14 +9,15 @@ public class Démonstration {
 	  public static void main(String[] args) {
 
       Bandeau monBandeau = new Bandeau();
-      Scénario monscenario = new Scénario(monBandeau);
-      Color couleur =  Color.RED;
-      monscenario.addEffet(new Zoom(3, monBandeau, "On zoome"));
-     // monscenario.addEffet(new Rotate(2, monBandeau, "On tourne"));
-      monscenario.addEffet(new Clignotant(3, monBandeau, "On clignote"));
-      monscenario.addEffet(new Couleur(monBandeau, "Change couleurs", couleur));
+      Scénario monScénario = new Scénario(monBandeau);
+      Color couleur =  Color.green;
+      
+      monScénario.ajoutEffet(new Rotation(3, monBandeau, "On tourne"));
+      monScénario.ajoutEffet(new Couleur(monBandeau, "Change de couleur", couleur));
+      monScénario.ajoutEffet(new Zoom(5, monBandeau, "On zoome"));
+      monScénario.ajoutEffet(new Clignotement(4, monBandeau, "On clignote"));
 
-      monscenario.afficherScenario();
+      monScénario.afficherScénario();
 	  }
 
 
